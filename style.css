@@ -1,0 +1,106 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* CONTROLS */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* BUTTONS */
+button {
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #00e5ff, #00bcd4);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 229, 255, 0.4);
+}
+
+/* OUTPUT */
+#output {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* GRAPH */
+canvas {
+  margin-top: 35px;
+  width: 100% !important;
+  max-height: 380px;
+}
+/* LIGHT MODE */
+body.light {
+  background: #f4f6f8;
+  color: #111;
+}
+
+body.light .container {
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+body.light button {
+  background: #007bff;
+  color: #fff;
+}
+
+body.light button:hover {
+  background: #0056b3;
+}
+
+

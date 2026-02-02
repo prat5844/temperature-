@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- RESPONSIVE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- WEBSITE TITLE -->
+  <title>Temperature History Website | Climate Trends & Prediction</title>
+
+  <!-- SEO META TAGS -->
+  <meta
+    name="description"
+    content="A climate analytics website to explore historical monthly temperature trends, visualize data, export CSVs, and predict future temperatures for any city."
+  >
+
+  <meta
+    name="keywords"
+    content="temperature history, climate data, weather trends, temperature prediction, climate analysis, monthly temperature, climate website"
+  >
+
+  <meta name="author" content="Pratik Bhosale">
+
+  <!-- SEARCH ENGINE INSTRUCTIONS -->
+  <meta name="robots" content="index, follow">
+
+  <!-- OPEN GRAPH (FOR SOCIAL SHARING) -->
+  <meta property="og:title" content="Temperature History Website">
+  <meta
+    property="og:description"
+    content="Explore historical and predicted temperature trends for any city with interactive charts."
+  >
+  <meta property="og:type" content="website">
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🌍 Monthly Temperature History</h1>
+
+    <!-- THEME TOGGLE -->
+    <div class="controls">
+      <button id="themeToggle">🌗 Toggle Theme</button>
+    </div>
+
+    <!-- CITY SEARCH -->
+    <div class="controls">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name (optional)"
+      >
+      <button onclick="searchCity()">Search City</button>
+    </div>
+
+    <!-- RANGE SELECTION -->
+    <div class="controls">
+      <label>Start Month</label>
+      <input type="month" id="startDate">
+
+      <label>End Month</label>
+      <input type="month" id="endDate">
+
+      <button id="startBtn">Fetch Data</button>
+    </div>
+
+    <!-- EXACT MONTH -->
+    <div class="controls">
+      <label>Exact Month</label>
+      <input type="month" id="singleMonth">
+
+      <button onclick="getExactMonthTemp()">Get Month</button>
+    </div>
+
+    <!-- CSV EXPORT -->
+    <div class="controls">
+      <button onclick="downloadCSV()">⬇️ Download CSV</button>
+    </div>
+
+    <!-- PREDICTION -->
+    <div class="controls">
+      <button onclick="predictFuture()">🤖 Predict Next 12 Months</button>
+    </div>
+
+    <!-- OUTPUT -->
+    <div id="output"></div>
+
+    <!-- GRAPH -->
+    <canvas id="tempChart"></canvas>
+
+  </div>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
